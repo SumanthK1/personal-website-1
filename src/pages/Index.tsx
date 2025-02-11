@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
@@ -95,14 +96,6 @@ const Index = () => {
                 in design and development, I bring ideas to life through clean,
                 efficient code and thoughtful design.
               </p>
-              <div className="grid grid-cols-3 gap-8">
-                {["Design", "Development", "Strategy"].map((skill) => (
-                  <div key={skill} className="p-6 bg-white/80 backdrop-blur-sm rounded-2xl shadow-sm">
-                    <h3 className="font-semibold mb-2">{skill}</h3>
-                    <p className="text-sm text-accent">Expert</p>
-                  </div>
-                ))}
-              </div>
             </div>
           </div>
         </div>
