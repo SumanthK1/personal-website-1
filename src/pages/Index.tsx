@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
@@ -87,31 +86,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Work Section */}
-      <section id="work" className="py-32 bg-primary-light">
-        <div className="container mx-auto px-6">
-          <div className="reveal">
-            <h2 className="text-4xl font-bold mb-16 text-center">Selected Work</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-              {[1, 2, 3, 4].map((item) => (
-                <div
-                  key={item}
-                  className="group relative overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-xl transition-all duration-300"
-                >
-                  <div className="aspect-video bg-accent-light"></div>
-                  <div className="p-8">
-                    <h3 className="text-xl font-semibold mb-2">Project {item}</h3>
-                    <p className="text-accent">
-                      A brief description of the project and its impact.
-                    </p>
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       {/* About Section */}
       <section id="about" className="py-32">
         <div className="container mx-auto px-6">
@@ -132,6 +106,31 @@ const Index = () => {
                   </div>
                 ))}
               </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      {/* Work Section */}
+      <section id="work" className="py-32 bg-primary-light">
+        <div className="container mx-auto px-6">
+          <div className="reveal">
+            <h2 className="text-4xl font-bold mb-16 text-center">Selected Work</h2>
+            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
+              {[1, 2, 3, 4].map((item) => (
+                <div
+                  key={item}
+                  className="group relative overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-xl transition-all duration-300"
+                >
+                  <div className="aspect-video bg-accent-light"></div>
+                  <div className="p-8">
+                    <h3 className="text-xl font-semibold mb-2">Project {item}</h3>
+                    <p className="text-accent">
+                      A brief description of the project and its impact.
+                    </p>
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
         </div>
