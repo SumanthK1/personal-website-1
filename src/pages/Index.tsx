@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
@@ -26,7 +25,6 @@ const Index = () => {
 
   return (
     <div className="min-h-screen w-full overflow-x-hidden">
-      {/* Navigation */}
       <nav
         className={`fixed top-0 w-full z-50 transition-all duration-300 ${
           scrolled ? "glass shadow-sm" : ""
@@ -60,7 +58,6 @@ const Index = () => {
         </div>
       </nav>
 
-      {/* Hero Section */}
       <section className="min-h-screen flex items-center justify-center pt-20">
         <div className="container mx-auto px-6">
           <motion.div
@@ -87,7 +84,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* About Section */}
       <section id="about" className="py-32 relative bg-gradient-to-b from-white via-primary-light to-primary-light">
         <div className="container mx-auto px-6">
           <div className="reveal">
@@ -112,13 +108,12 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Work Section */}
       <section id="work" className="py-32 bg-primary-light">
         <div className="container mx-auto px-6">
           <div className="reveal">
             <h2 className="text-4xl font-bold mb-16 text-center">Selected Work</h2>
-            <div className="grid grid-cols-1 md:grid-cols-2 gap-12">
-              {[1, 2, 3, 4].map((item) => (
+            <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
+              {[1, 2, 3, 4, 5, 6].map((item) => (
                 <div
                   key={item}
                   className="group relative overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-xl transition-all duration-300"
@@ -137,7 +132,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Contact Section */}
       <section id="contact" className="py-32 bg-primary text-white">
         <div className="container mx-auto px-6">
           <div className="reveal">
@@ -158,7 +152,6 @@ const Index = () => {
         </div>
       </section>
 
-      {/* Footer */}
       <footer className="py-8 bg-primary text-white border-t border-white/10">
         <div className="container mx-auto px-6">
           <div className="flex justify-between items-center">
