@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
@@ -87,7 +88,7 @@ const Index = () => {
       </section>
 
       {/* About Section */}
-      <section id="about" className="py-32">
+      <section id="about" className="py-32 relative bg-gradient-to-b from-white via-primary-light to-primary-light">
         <div className="container mx-auto px-6">
           <div className="reveal">
             <div className="max-w-3xl mx-auto text-center">
@@ -100,7 +101,7 @@ const Index = () => {
               </p>
               <div className="grid grid-cols-3 gap-8">
                 {["Design", "Development", "Strategy"].map((skill) => (
-                  <div key={skill} className="p-6 bg-primary-light rounded-2xl">
+                  <div key={skill} className="p-6 bg-white/80 backdrop-blur-sm rounded-2xl shadow-sm">
                     <h3 className="font-semibold mb-2">{skill}</h3>
                     <p className="text-sm text-accent">Expert</p>
                   </div>
