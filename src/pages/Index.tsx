@@ -1,7 +1,7 @@
 
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Home } from "lucide-react";
 
 const Index = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -24,6 +24,10 @@ const Index = () => {
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
 
+  const scrollToTop = () => {
+    window.scrollTo({ top: 0, behavior: 'smooth' });
+  };
+
   return (
     <div className="min-h-screen w-full overflow-x-hidden">
       <nav
@@ -43,9 +47,9 @@ const Index = () => {
             <motion.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="space-x-8"
+              className="flex items-center space-x-8"
             >
-              {["Work", "About", "Contact"].map((item) => (
+              {["About", "Work", "Contact"].map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
@@ -54,6 +58,13 @@ const Index = () => {
                   {item}
                 </a>
               ))}
+              <button
+                onClick={scrollToTop}
+                className="inline-flex items-center space-x-2 bg-[#0EA5E9] text-white px-6 py-2 rounded-full hover:bg-[#0284C7] transition-colors"
+              >
+                <Home className="w-4 h-4" />
+                <span>Home</span>
+              </button>
             </motion.div>
           </div>
         </div>
