@@ -1,7 +1,6 @@
-
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight, Home } from "lucide-react";
+import { ArrowRight } from "lucide-react";
 
 const Index = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -23,10 +22,6 @@ const Index = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
-
-  const scrollToTop = () => {
-    window.scrollTo({ top: 0, behavior: 'smooth' });
-  };
 
   return (
     <div className="min-h-screen w-full overflow-x-hidden">
@@ -58,13 +53,6 @@ const Index = () => {
                   {item}
                 </a>
               ))}
-              <button
-                onClick={scrollToTop}
-                className="inline-flex items-center space-x-2 bg-[#0EA5E9] text-white px-6 py-2 rounded-full hover:bg-[#0284C7] transition-colors"
-              >
-                <Home className="w-4 h-4" />
-                <span>Home</span>
-              </button>
             </motion.div>
           </div>
         </div>
