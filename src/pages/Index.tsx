@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
@@ -67,7 +68,9 @@ const Index = () => {
             className="max-w-4xl mx-auto text-center"
           >
             <h2 className="text-sm text-accent mb-6">Welcome to my portfolio</h2>
-            <h1 className="text-6xl md:text-7xl font-bold mb-8 leading-tight">
+            <h1 
+              className="text-6xl md:text-7xl font-bold mb-8 leading-tight bg-gradient-to-r from-[#0EA5E9] via-[#33C3F0] to-[#4ADE80] text-transparent bg-clip-text"
+            >
               Creating digital experiences that inspire and delight.
             </h1>
             <p className="text-xl text-accent max-w-2xl mx-auto mb-12">
