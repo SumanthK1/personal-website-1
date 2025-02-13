@@ -136,8 +136,8 @@ const Index = () => {
                 Have a project in mind? Let's create something amazing together.
               </p>
               <a
-                href="mailto:hello@example.com"
-                className="inline-flex items-center space-x-2 bg-white text-primary px-8 py-4 rounded-full hover:bg-primary-light transition-colors"
+                href="mailto:sumanth.kumar@uwaterloo.ca"
+                className="inline-flex items-center space-x-2 bg-[#0071e3] text-white px-6 py-3 rounded-full hover:bg-[#0077ED] transition-colors"
               >
                 <span>Get in touch</span>
                 <ArrowRight className="w-4 h-4" />
