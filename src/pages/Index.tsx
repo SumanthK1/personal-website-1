@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 import { ArrowRight } from "lucide-react";
@@ -78,10 +77,9 @@ const Index = () => {
             </p>
             <a
               href="#work"
-              className="inline-flex items-center space-x-2 bg-primary text-white px-8 py-4 rounded-full hover:bg-primary-dark transition-colors"
+              className="inline-flex items-center text-[#0071e3] px-8 py-4 rounded-full border-2 border-[#0071e3] bg-white hover:bg-[#0071e3] hover:text-white transition-colors"
             >
-              <span>View my work</span>
-              <ArrowRight className="w-4 h-4" />
+              View my work
             </a>
           </motion.div>
         </div>
@@ -137,10 +135,9 @@ const Index = () => {
               </p>
               <a
                 href="mailto:sumanth.kumar@uwaterloo.ca"
-                className="inline-flex items-center space-x-2 bg-[#0071e3] text-white px-6 py-3 rounded-full hover:bg-[#0077ED] transition-colors"
+                className="inline-flex items-center bg-[#0071e3] text-white px-6 py-3 rounded-full hover:bg-[#0077ED] transition-colors"
               >
-                <span>Get in touch</span>
-                <ArrowRight className="w-4 h-4" />
+                Get in touch
               </a>
             </div>
           </div>
