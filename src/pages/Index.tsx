@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
@@ -22,6 +21,15 @@ const Index = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  const projectImages = [
+    "photo-1488590528505-98d2b5aba04b",
+    "photo-1486312338219-ce68d2c6f44d",
+    "photo-1487058792275-0ad4aaf24ca7",
+    "photo-1519389950473-47ba0277781c",
+    "photo-1498050108023-c5249f4df085",
+    "photo-1488590528505-98d2b5aba04b"
+  ];
 
   return (
     <div className="min-h-screen w-full overflow-x-hidden">
@@ -106,12 +114,18 @@ const Index = () => {
           <div className="reveal">
             <h2 className="text-4xl font-bold mb-16 text-center">Selected Work</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-              {[1, 2, 3, 4, 5, 6].map((item) => (
+              {[1, 2, 3, 4, 5, 6].map((item, index) => (
                 <div
                   key={item}
                   className="group relative overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-xl transition-all duration-300"
                 >
-                  <div className="aspect-video bg-accent-light"></div>
+                  <div className="aspect-video bg-accent-light">
+                    <img 
+                      src={`https://images.unsplash.com/${projectImages[index]}`}
+                      alt={`Project ${item}`}
+                      className="w-full h-full object-cover"
+                    />
+                  </div>
                   <div className="p-8">
                     <h3 className="text-xl font-semibold mb-2">Project {item}</h3>
                     <p className="text-accent">
@@ -147,15 +161,20 @@ const Index = () => {
       <footer className="py-8 bg-primary text-white border-t border-white/10">
         <div className="container mx-auto px-6">
           <div className="flex justify-between items-center">
-            <p className="text-sm opacity-80">© 2024 Sumanth Kumar. All rights reserved.</p>
+            <p className="text-sm opacity-80">© 2025 Sumanth Kumar. All rights reserved.</p>
             <div className="space-x-6">
-              {["LinkedIn", "GitHub"].map((platform) => (
+              {[
+                { name: "LinkedIn", url: "https://www.linkedin.com/in/sumanthkumar7494/" },
+                { name: "GitHub", url: "https://github.com/SumanthK1" }
+              ].map((platform) => (
                 <a
-                  key={platform}
-                  href="#"
+                  key={platform.name}
+                  href={platform.url}
+                  target="_blank"
+                  rel="noopener noreferrer"
                   className="text-sm opacity-80 hover:opacity-100 transition-opacity"
                 >
-                  {platform}
+                  {platform.name}
                 </a>
               ))}
             </div>
