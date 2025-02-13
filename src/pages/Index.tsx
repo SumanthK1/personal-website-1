@@ -1,6 +1,6 @@
+
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { ArrowRight } from "lucide-react";
 
 const Index = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -77,7 +77,7 @@ const Index = () => {
             </p>
             <a
               href="#work"
-              className="inline-flex items-center text-[#0071e3] px-8 py-4 rounded-full border-2 border-[#0071e3] bg-white hover:bg-[#0071e3] hover:text-white transition-colors"
+              className="inline-flex items-center bg-[#0071e3] text-white px-6 py-3 rounded-full hover:bg-[#0077ED] transition-colors"
             >
               View my work
             </a>
