@@ -12,8 +12,16 @@
     --ring: 240 5.9% 10%;
   }
 
+  .dark {
+    --background: 240 10% 3.9%;
+    --foreground: 0 0% 98%;
+    --border: 240 3.7% 15.9%;
+    --input: 240 3.7% 15.9%;
+    --ring: 240 4.9% 83.9%;
+  }
+
   * {
-    @apply border-border selection:bg-primary-light selection:text-primary;
+    @apply border-border selection:bg-primary-light selection:text-primary dark:selection:bg-white/10 dark:selection:text-white;
   }
 
   html {
@@ -21,7 +29,7 @@
   }
 
   body {
-    @apply bg-white text-primary antialiased;
+    @apply bg-white text-primary antialiased dark:bg-[#000000] dark:text-white;
     font-feature-settings: "ss01", "ss02", "cv01", "cv02", "cv03";
   }
 }
@@ -32,7 +40,11 @@
   }
   
   .glass {
-    @apply backdrop-blur-xl bg-white/80 supports-[backdrop-filter]:bg-white/20;
+    @apply backdrop-blur-xl bg-white/80 dark:bg-black/20 supports-[backdrop-filter]:bg-white/20;
+  }
+
+  .text-glow {
+    @apply dark:text-white dark:drop-shadow-[0_0_15px_rgba(255,255,255,0.5)];
   }
 }
 

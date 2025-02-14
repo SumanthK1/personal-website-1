@@ -1,9 +1,10 @@
-
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { Moon, Sun } from "lucide-react";
 
 const Index = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [isDark, setIsDark] = useState(false);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -22,6 +23,14 @@ const Index = () => {
     window.addEventListener("scroll", handleScroll);
     return () => window.removeEventListener("scroll", handleScroll);
   }, []);
+
+  useEffect(() => {
+    if (isDark) {
+      document.documentElement.classList.add('dark');
+    } else {
+      document.documentElement.classList.remove('dark');
+    }
+  }, [isDark]);
 
   const projectImages = [
     "photo-1488590528505-98d2b5aba04b",
@@ -44,11 +53,17 @@ const Index = () => {
             <motion.h1 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="text-xl font-semibold"
+              className="text-xl font-semibold text-glow"
             >
               <span className="md:hidden">Sumanth</span>
               <span className="hidden md:inline">Sumanth Kumar</span>
             </motion.h1>
+            <button
+              onClick={() => setIsDark(!isDark)}
+              className="absolute left-1/2 -translate-x-1/2 p-2 rounded-full bg-black dark:bg-white text-white dark:text-black transition-colors duration-300"
+            >
+              {isDark ? <Sun size={20} /> : <Moon size={20} />}
+            </button>
             <motion.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -58,7 +73,7 @@ const Index = () => {
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
-                  className="text-sm hover:text-accent transition-colors"
+                  className="text-sm hover:text-accent transition-colors dark:text-white/80 dark:hover:text-white"
                 >
                   {item}
                 </a>
@@ -76,13 +91,13 @@ const Index = () => {
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto text-center"
           >
-            <h2 className="text-sm text-accent mb-6">Welcome to my portfolio</h2>
+            <h2 className="text-sm text-accent mb-6 dark:text-white/60">Welcome to my portfolio</h2>
             <h1 
-              className="text-6xl md:text-7xl font-bold mb-8 leading-tight bg-gradient-to-r from-[#0EA5E9] via-[#33C3F0] to-[#4ADE80] text-transparent bg-clip-text"
+              className="text-6xl md:text-7xl font-bold mb-8 leading-tight bg-gradient-to-r from-[#0EA5E9] via-[#33C3F0] to-[#4ADE80] text-transparent bg-clip-text dark:text-glow"
             >
               Creating digital experiences that inspire and delight.
             </h1>
-            <p className="text-xl text-accent max-w-2xl mx-auto mb-12">
+            <p className="text-xl text-accent max-w-2xl mx-auto mb-12 dark:text-white/60">
               I'm a designer and developer passionate about crafting beautiful, functional websites and applications.
             </p>
             <a
@@ -160,7 +175,7 @@ const Index = () => {
         </div>
       </section>
 
-      <footer className="py-8 bg-primary text-white border-t border-white/10">
+      <footer className="py-8 bg-primary text-white dark:bg-black border-t border-white/10">
         <div className="container mx-auto px-6">
           <div className="flex justify-between items-center">
             <p className="text-sm opacity-80">© 2025 Sumanth Kumar</p>
