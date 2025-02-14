@@ -48,23 +48,23 @@ const Index = () => {
         }`}
       >
         <div className="container mx-auto px-6 py-4">
-          <div className="flex items-center justify-between">
+          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 md:gap-0">
             <motion.h1 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="text-xl font-semibold text-glow"
+              className="text-xl font-semibold text-glow text-center md:text-left"
             >
               <span className="md:hidden">Sumanth</span>
               <span className="hidden md:inline">Sumanth Kumar</span>
             </motion.h1>
             <button
               onClick={() => setIsDark(!isDark)}
-              className="absolute left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-black dark:bg-white transition-colors duration-300"
+              className="w-8 h-8 rounded-full bg-black dark:bg-white transition-colors duration-300 mx-auto md:absolute md:left-1/2 md:-translate-x-1/2"
             />
             <motion.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="flex items-center space-x-8"
+              className="flex items-center justify-center md:justify-end space-x-8"
             >
               {["About", "Work", "Contact"].map((item) => (
                 <a
@@ -90,7 +90,7 @@ const Index = () => {
           >
             <h2 className="text-sm text-accent mb-6 dark:text-white/60">Welcome to my portfolio</h2>
             <h1 
-              className="text-6xl md:text-7xl font-bold mb-8 leading-tight bg-gradient-to-r from-[#0EA5E9] via-[#33C3F0] to-[#4ADE80] text-transparent bg-clip-text dark:bg-gradient-to-b dark:from-[#F97316] dark:via-[#0EA5E9] dark:to-[#33C3F0]"
+              className="text-6xl md:text-7xl font-bold mb-8 leading-tight bg-gradient-to-r from-[#0EA5E9] via-[#33C3F0] to-[#4ADE80] text-transparent bg-clip-text dark:bg-clip-text-0 dark:heading-glow"
             >
               Creating digital experiences that inspire and delight.
             </h1>
@@ -153,7 +153,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="contact" className="py-32 bg-[#1D1D1F] text-white dark:bg-[#1D1D1F]">
+      <section id="contact" className="py-32 bg-[#1D1D1F] text-white">
         <div className="container mx-auto px-6">
           <div className="reveal">
             <div className="max-w-3xl mx-auto text-center">
@@ -172,7 +172,7 @@ const Index = () => {
         </div>
       </section>
 
-      <footer className="py-8 bg-primary text-white dark:bg-black border-t border-white/10">
+      <footer className="py-8 bg-[#1D1D1F] text-white border-t border-white/10">
         <div className="container mx-auto px-6">
           <div className="flex justify-between items-center">
             <p className="text-sm opacity-80">© 2025 Sumanth Kumar</p>
