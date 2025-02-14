@@ -1,3 +1,4 @@
+
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
@@ -45,7 +46,8 @@ const Index = () => {
               animate={{ opacity: 1 }}
               className="text-xl font-semibold"
             >
-              Sumanth Kumar
+              <span className="md:hidden">Sumanth</span>
+              <span className="hidden md:inline">Sumanth Kumar</span>
             </motion.h1>
             <motion.div 
               initial={{ opacity: 0 }}
@@ -161,7 +163,7 @@ const Index = () => {
       <footer className="py-8 bg-primary text-white border-t border-white/10">
         <div className="container mx-auto px-6">
           <div className="flex justify-between items-center">
-            <p className="text-sm opacity-80">© 2025 Sumanth Kumar. All rights reserved.</p>
+            <p className="text-sm opacity-80">© 2025 Sumanth Kumar</p>
             <div className="space-x-6">
               {[
                 { name: "LinkedIn", url: "https://www.linkedin.com/in/sumanthkumar7494/" },
