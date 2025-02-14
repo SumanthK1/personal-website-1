@@ -1,4 +1,3 @@
-
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
 
@@ -91,7 +90,7 @@ const Index = () => {
           >
             <h2 className="text-sm text-accent mb-6 dark:text-white/60">Welcome to my portfolio</h2>
             <h1 
-              className="text-6xl md:text-7xl font-bold mb-8 leading-tight bg-gradient-to-r from-[#F97316] via-[#0EA5E9] to-[#33C3F0] text-transparent bg-clip-text dark:from-[#F97316] dark:via-[#0EA5E9] dark:to-[#33C3F0]"
+              className="text-6xl md:text-7xl font-bold mb-8 leading-tight bg-gradient-to-r from-[#0EA5E9] via-[#33C3F0] to-[#4ADE80] text-transparent bg-clip-text dark:bg-gradient-to-b dark:from-[#F97316] dark:via-[#0EA5E9] dark:to-[#33C3F0]"
             >
               Creating digital experiences that inspire and delight.
             </h1>
@@ -154,7 +153,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="contact" className="py-32 bg-primary text-white dark:bg-black">
+      <section id="contact" className="py-32 bg-[#1D1D1F] text-white dark:bg-[#1D1D1F]">
         <div className="container mx-auto px-6">
           <div className="reveal">
             <div className="max-w-3xl mx-auto text-center">
