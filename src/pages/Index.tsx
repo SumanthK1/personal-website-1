@@ -1,6 +1,6 @@
+
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
-import { Moon, Sun } from "lucide-react";
 
 const Index = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -60,10 +60,8 @@ const Index = () => {
             </motion.h1>
             <button
               onClick={() => setIsDark(!isDark)}
-              className="absolute left-1/2 -translate-x-1/2 p-2 rounded-full bg-black dark:bg-white text-white dark:text-black transition-colors duration-300"
-            >
-              {isDark ? <Sun size={20} /> : <Moon size={20} />}
-            </button>
+              className="absolute left-1/2 -translate-x-1/2 w-8 h-8 rounded-full bg-black dark:bg-white transition-colors duration-300"
+            />
             <motion.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
@@ -93,7 +91,7 @@ const Index = () => {
           >
             <h2 className="text-sm text-accent mb-6 dark:text-white/60">Welcome to my portfolio</h2>
             <h1 
-              className="text-6xl md:text-7xl font-bold mb-8 leading-tight bg-gradient-to-r from-[#0EA5E9] via-[#33C3F0] to-[#4ADE80] text-transparent bg-clip-text dark:text-glow"
+              className="text-6xl md:text-7xl font-bold mb-8 leading-tight bg-gradient-to-r from-[#F97316] via-[#0EA5E9] to-[#33C3F0] text-transparent bg-clip-text dark:from-[#F97316] dark:via-[#0EA5E9] dark:to-[#33C3F0]"
             >
               Creating digital experiences that inspire and delight.
             </h1>
@@ -110,12 +108,12 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="about" className="py-32 relative bg-gradient-to-b from-white via-primary-light to-primary-light">
+      <section id="about" className="py-32 relative bg-gradient-to-b from-white via-primary-light to-primary-light dark:from-black dark:via-primary-dark dark:to-primary-dark">
         <div className="container mx-auto px-6">
           <div className="reveal">
             <div className="max-w-3xl mx-auto text-center">
-              <h2 className="text-4xl font-bold mb-8">About Me</h2>
-              <p className="text-xl text-accent mb-12">
+              <h2 className="text-4xl font-bold mb-8 dark:text-white">About Me</h2>
+              <p className="text-xl text-accent mb-12 dark:text-white/60">
                 I combine technical expertise with creative vision to build
                 digital solutions that make a difference. With years of experience
                 in design and development, I bring ideas to life through clean,
@@ -126,17 +124,17 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="work" className="py-32 bg-primary-light">
+      <section id="work" className="py-32 bg-primary-light dark:bg-primary-dark">
         <div className="container mx-auto px-6">
           <div className="reveal">
-            <h2 className="text-4xl font-bold mb-16 text-center">Selected Work</h2>
+            <h2 className="text-4xl font-bold mb-16 text-center dark:text-white">Selected Work</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
               {[1, 2, 3, 4, 5, 6].map((item, index) => (
                 <div
                   key={item}
-                  className="group relative overflow-hidden rounded-2xl bg-white shadow-sm hover:shadow-xl transition-all duration-300"
+                  className="group relative overflow-hidden rounded-2xl bg-white dark:bg-black/40 shadow-sm hover:shadow-xl transition-all duration-300"
                 >
-                  <div className="aspect-video bg-accent-light">
+                  <div className="aspect-video bg-accent-light dark:bg-accent/10">
                     <img 
                       src={`https://images.unsplash.com/${projectImages[index]}`}
                       alt={`Project ${item}`}
@@ -144,8 +142,8 @@ const Index = () => {
                     />
                   </div>
                   <div className="p-8">
-                    <h3 className="text-xl font-semibold mb-2">Project {item}</h3>
-                    <p className="text-accent">
+                    <h3 className="text-xl font-semibold mb-2 dark:text-white">Project {item}</h3>
+                    <p className="text-accent dark:text-white/60">
                       A brief description of the project and its impact.
                     </p>
                   </div>
@@ -156,7 +154,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="contact" className="py-32 bg-primary text-white">
+      <section id="contact" className="py-32 bg-primary text-white dark:bg-black">
         <div className="container mx-auto px-6">
           <div className="reveal">
             <div className="max-w-3xl mx-auto text-center">
