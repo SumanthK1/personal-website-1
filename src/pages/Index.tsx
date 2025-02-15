@@ -89,7 +89,7 @@ const Index = () => {
           >
             <h2 className="text-sm text-accent mb-6 dark:text-white/60">Welcome to my portfolio</h2>
             <h1 
-              className="text-6xl md:text-7xl font-bold mb-8 leading-tight dark:heading-glow"
+              className="text-6xl md:text-7xl font-bold mb-8 leading-tight bg-gradient-to-r from-[#0EA5E9] via-[#33C3F0] to-[#4ADE80] bg-clip-text text-transparent dark:text-white dark:heading-glow dark:bg-none"
             >
               Creating digital experiences that inspire and delight.
             </h1>
