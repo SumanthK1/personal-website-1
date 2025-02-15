@@ -48,7 +48,11 @@
   }
 
   .heading-glow {
-    @apply dark:text-white dark:drop-shadow-[0_0_30px_rgba(249,115,22,0.5)] dark:drop-shadow-[0_0_50px_rgba(14,165,233,0.3)];
+    @apply dark:text-white 
+    dark:drop-shadow-[0_0_20px_rgba(249,115,22,0.7)]
+    dark:drop-shadow-[0_4px_20px_rgba(14,165,233,0.7)]
+    dark:drop-shadow-[0_0_40px_rgba(249,115,22,0.4)]
+    dark:drop-shadow-[0_4px_40px_rgba(14,165,233,0.4)];
   }
 }
 
