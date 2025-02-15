@@ -54,8 +54,7 @@ const Index = () => {
               animate={{ opacity: 1 }}
               className="text-sm md:text-xl font-semibold text-glow"
             >
-              <span className="md:hidden">Sumanth</span>
-              <span className="hidden md:inline">Sumanth Kumar</span>
+              Sumanth Kumar
             </motion.h1>
             <button
               onClick={() => setIsDark(!isDark)}
