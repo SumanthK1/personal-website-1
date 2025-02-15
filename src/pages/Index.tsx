@@ -48,29 +48,29 @@ const Index = () => {
         }`}
       >
         <div className="container mx-auto px-6 py-4">
-          <div className="flex flex-col md:flex-row md:items-center md:justify-between gap-4 md:gap-0">
+          <div className="flex items-center justify-between">
             <motion.h1 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="text-xl font-semibold text-glow text-center md:text-left"
+              className="text-sm md:text-xl font-semibold text-glow"
             >
               <span className="md:hidden">Sumanth</span>
               <span className="hidden md:inline">Sumanth Kumar</span>
             </motion.h1>
             <button
               onClick={() => setIsDark(!isDark)}
-              className="w-8 h-8 rounded-full bg-black dark:bg-white transition-colors duration-300 mx-auto md:absolute md:left-1/2 md:-translate-x-1/2"
+              className="w-6 h-6 rounded-full bg-black dark:bg-white transition-colors duration-300 absolute left-1/2 -translate-x-1/2"
             />
             <motion.div 
               initial={{ opacity: 0 }}
               animate={{ opacity: 1 }}
-              className="flex items-center justify-center md:justify-end space-x-8"
+              className="flex items-center space-x-4 md:space-x-8"
             >
               {["About", "Work", "Contact"].map((item) => (
                 <a
                   key={item}
                   href={`#${item.toLowerCase()}`}
-                  className="text-sm hover:text-accent transition-colors dark:text-white/80 dark:hover:text-white"
+                  className="text-xs md:text-sm hover:text-accent transition-colors dark:text-white/80 dark:hover:text-white"
                 >
                   {item}
                 </a>
