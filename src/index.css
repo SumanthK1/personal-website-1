@@ -48,7 +48,7 @@
   }
 
   .heading-glow {
-    @apply dark:[text-shadow:0_0_10px_#243BFF,0_0_20px_#A0C8FF,0_0_40px_#EEC0A6,0_0_60px_#D6453D];
+    @apply dark:[text-shadow:0_0_10px_#FF8A80,0_0_20px_#FF8A80,0_0_40px_#7B68EE,0_0_60px_#7B68EE];
   }
 }
 
