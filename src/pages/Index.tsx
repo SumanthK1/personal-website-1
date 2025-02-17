@@ -32,22 +32,31 @@ const Index = () => {
   }, [isDark]);
 
   const projectImages = [
-    "photo-1488590528505-98d2b5aba04b",
-    "photo-1486312338219-ce68d2c6f44d",
-    "photo-1487058792275-0ad4aaf24ca7",
-    "photo-1519389950473-47ba0277781c",
-    "photo-1498050108023-c5249f4df085",
-    "photo-1488590528505-98d2b5aba04b"
+    "/images/meta.png",
+    "/images/node.png",
+    "/images/thescore.jpg",
+    "/images/healthcaresystemsra.png",
+    "/images/spotwork.png",
+    "/images/stride.png"
+  ];
+
+  const projectDetails = [
+    { title: "Meta", description: "Software Engineering Intern - TBD\n(May 2025 - August 2025)" },
+    { title: "Node App", description: "Software Engineering Intern - Internal Tools\n(January 2025 - April 2025)" },
+    { title: "theScore", description: "Software Engineering Intern - Accounts\n(May 2024 - August 2024)" },
+    { title: "Healthcare Systems R&A", description: "Software Engineering Intern - Machine Learning\n(September 2023 - December 2023)" },
+    { title: "Spotwork", description: "Software Engineering Intern - Mobile\n(January 2023 - April 2023)" },
+    { title: "Stride", description: "Software Engineering Intern - Product\n(May 2022 - August 2022)" }
   ];
 
   return (
     <div className="min-h-screen w-full overflow-x-hidden">
       <nav
-        className={`fixed top-0 w-full z-50 transition-all duration-300 ${
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 ${
           scrolled ? "glass shadow-sm" : ""
         }`}
       >
-        <div className="container mx-auto px-6 py-4">
+        <div className="w-full px-6 py-4">
           <div className="flex items-center justify-between">
             <motion.h1 
               initial={{ opacity: 0 }}
@@ -87,14 +96,14 @@ const Index = () => {
             transition={{ duration: 0.8 }}
             className="max-w-4xl mx-auto text-center"
           >
-            <h2 className="text-sm text-accent mb-6 dark:text-white/60">Welcome to my portfolio</h2>
+            <h2 className="text-sm text-accent mb-6 dark:text-white/60">Welcome</h2>
             <h1 
               className="text-6xl md:text-7xl font-bold mb-8 leading-tight bg-gradient-to-r from-[#0EA5E9] via-[#33C3F0] to-[#4ADE80] bg-clip-text text-transparent dark:text-white dark:heading-glow dark:bg-none"
             >
-              Creating digital experiences that inspire and delight.
+             Hello, I’m Sumanth. Solving problems, one line at a time.
             </h1>
-            <p className="text-xl text-accent max-w-2xl mx-auto mb-12 dark:text-white/60">
-              I'm a designer and developer passionate about crafting beautiful, functional websites and applications.
+            <p className="text-xl text-accent max-w-3xl mx-auto mb-12 dark:text-white/60">
+            Software at Meta for Summer 2025. Mechatronics at UWaterloo until April 2026.
             </p>
             <a
               href="#work"
@@ -107,15 +116,18 @@ const Index = () => {
       </section>
 
       <section id="about" className="py-32 relative bg-gradient-to-b from-white via-primary-light to-primary-light dark:from-black dark:via-primary-dark dark:to-primary-dark">
-        <div className="container mx-auto px-6">
+        <div className="container mx-auto px-6 max-w-5xl">
           <div className="reveal">
-            <div className="max-w-3xl mx-auto text-center">
+            <div className="max-w-4xl mx-auto text-center">
               <h2 className="text-4xl font-bold mb-8 dark:text-white">About Me</h2>
               <p className="text-xl text-accent mb-12 dark:text-white/60">
-                I combine technical expertise with creative vision to build
-                digital solutions that make a difference. With years of experience
-                in design and development, I bring ideas to life through clean,
-                efficient code and thoughtful design.
+              Hey, I'm Sumanth, a final-year Mechatronics Engineering student at the University of Waterloo and a seasoned software engineering intern (six times over). 
+              I've built (and broken) my fair share of code at Meta, Node, theScore, Healthcare Systems R&A, Spotwork, and Stride, 
+              so I like to think I know what I'm doing... most of the time.<br /><br />
+
+              When I'm not coding, you'll find me playing or watching soccer (I support Tottenham, so I'm used to heartbreak), 
+              gaming (mediocre at FIFA, decent at Rocket League, garbage at Fortnite), or convincing myself I'll go on a run later.
+              I'm currently on the lookout for new-grad opportunities starting in 2026, so if you're hiring, let's chat! 🚀
               </p>
             </div>
           </div>
@@ -125,24 +137,24 @@ const Index = () => {
       <section id="work" className="py-32 bg-primary-light dark:bg-primary-dark">
         <div className="container mx-auto px-6">
           <div className="reveal">
-            <h2 className="text-4xl font-bold mb-16 text-center dark:text-white">Selected Work</h2>
+            <h2 className="text-4xl font-bold mb-16 text-center dark:text-white">Experience</h2>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-12">
-              {[1, 2, 3, 4, 5, 6].map((item, index) => (
+              {projectDetails.map((project, index) => (
                 <div
-                  key={item}
-                  className="group relative overflow-hidden rounded-2xl bg-white dark:bg-black/40 shadow-sm hover:shadow-xl transition-all duration-300"
+                  key={index}
+                  className="group relative overflow-hidden rounded-2xl bg-white dark:bg-[#161617] shadow-sm dark:shadow-white/10 hover:shadow-xl transition-all duration-300"
                 >
                   <div className="aspect-video bg-accent-light dark:bg-accent/10">
                     <img 
-                      src={`https://images.unsplash.com/${projectImages[index]}`}
-                      alt={`Project ${item}`}
+                      src={projectImages[index]}
+                      alt={project.title}
                       className="w-full h-full object-cover"
                     />
                   </div>
                   <div className="p-8">
-                    <h3 className="text-xl font-semibold mb-2 dark:text-white">Project {item}</h3>
-                    <p className="text-accent dark:text-white/60">
-                      A brief description of the project and its impact.
+                    <h3 className="text-xl font-semibold mb-2 dark:text-white">{project.title}</h3>
+                    <p className="text-accent dark:text-white/60 whitespace-pre-line">
+                      {project.description}
                     </p>
                   </div>
                 </div>
@@ -158,7 +170,7 @@ const Index = () => {
             <div className="max-w-3xl mx-auto text-center">
               <h2 className="text-4xl font-bold mb-8">Let's Work Together</h2>
               <p className="text-xl opacity-80 mb-12">
-                Have a project in mind? Let's create something amazing together.
+                Have a project in mind? Feel free to reach out!
               </p>
               <a
                 href="mailto:sumanth.kumar@uwaterloo.ca"
@@ -171,8 +183,8 @@ const Index = () => {
         </div>
       </section>
 
-      <footer className="py-8 bg-[#1D1D1F] text-white border-t border-white/10">
-        <div className="container mx-auto px-6">
+      <footer className="w-full py-8 bg-[#1D1D1F] text-white border-t border-white/10">
+        <div className="w-full px-6">
           <div className="flex justify-between items-center">
             <p className="text-sm opacity-80">© 2025 Sumanth Kumar</p>
             <div className="space-x-6">
