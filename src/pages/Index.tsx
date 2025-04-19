@@ -41,7 +41,7 @@ const Index = () => {
   ];
 
   const projectDetails = [
-    { title: "Meta", description: "Software Engineering Intern - TBD\n(May 2025 - August 2025)" },
+    { title: "Meta", description: "Software Engineering Intern - Monetization\n(May 2025 - August 2025)" },
     { title: "Node App", description: "Software Engineering Intern - Internal Tools\n(January 2025 - April 2025)" },
     { title: "theScore", description: "Software Engineering Intern - Accounts\n(May 2024 - August 2024)" },
     { title: "Healthcare Systems R&A", description: "Software Engineering Intern - Machine Learning\n(September 2023 - December 2023)" },
