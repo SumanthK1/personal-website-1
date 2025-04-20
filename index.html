@@ -6,8 +6,22 @@
     <title>Sumanth Kumar</title>
     <meta name="description" content="Lovable Generated Project" />
     <meta name="author" content="Lovable" />
-    <meta property="og:image" content="/personal-website-1/og-image.png" />
-    <link rel="icon" href="/personal-website-1/favicon.ico" />
+    
+    <script type="text/javascript">
+      // Determine the base path depending on hostname
+      var basePath = window.location.hostname === 'sumanthk1.github.io' ? '/personal-website-1' : '';
+      
+      // Set the favicon and og-image dynamically
+      var ogImageMeta = document.createElement('meta');
+      ogImageMeta.setAttribute('property', 'og:image');
+      ogImageMeta.setAttribute('content', basePath + '/og-image.png');
+      document.head.appendChild(ogImageMeta);
+      
+      var faviconLink = document.createElement('link');
+      faviconLink.setAttribute('rel', 'icon');
+      faviconLink.setAttribute('href', basePath + '/favicon.ico');
+      document.head.appendChild(faviconLink);
+    </script>
     
     <!-- Start Single Page Apps for GitHub Pages -->
     <script type="text/javascript">
