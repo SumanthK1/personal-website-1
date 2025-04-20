@@ -1,10 +1,13 @@
-import { useState, useEffect } from "react";
+import { useState, useEffect, useRef } from "react";
 import { motion } from "framer-motion";
 import { getAssetPath } from "@/lib/utils";
 
 const Index = () => {
   const [scrolled, setScrolled] = useState(false);
   const [isDark, setIsDark] = useState(false);
+  const aboutRef = useRef(null);
+  const workRef = useRef(null);
+  const contactRef = useRef(null);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -31,6 +34,11 @@ const Index = () => {
       document.documentElement.classList.remove('dark');
     }
   }, [isDark]);
+
+  // Navigation function
+  const scrollToSection = (ref) => {
+    ref.current.scrollIntoView({ behavior: 'smooth' });
+  };
 
   const projectImages = [
     getAssetPath("images/meta.png"),
@@ -75,15 +83,24 @@ const Index = () => {
               animate={{ opacity: 1 }}
               className="flex items-center space-x-4 md:space-x-8"
             >
-              {["About", "Work", "Contact"].map((item) => (
-                <a
-                  key={item}
-                  href={`#/${item.toLowerCase()}`}
-                  className="text-xs md:text-sm hover:text-accent transition-colors dark:text-white/80 dark:hover:text-white"
-                >
-                  {item}
-                </a>
-              ))}
+              <button
+                onClick={() => scrollToSection(aboutRef)}
+                className="text-xs md:text-sm hover:text-accent transition-colors dark:text-white/80 dark:hover:text-white"
+              >
+                About
+              </button>
+              <button
+                onClick={() => scrollToSection(workRef)}
+                className="text-xs md:text-sm hover:text-accent transition-colors dark:text-white/80 dark:hover:text-white"
+              >
+                Work
+              </button>
+              <button
+                onClick={() => scrollToSection(contactRef)}
+                className="text-xs md:text-sm hover:text-accent transition-colors dark:text-white/80 dark:hover:text-white"
+              >
+                Contact
+              </button>
             </motion.div>
           </div>
         </div>
@@ -106,17 +123,17 @@ const Index = () => {
             <p className="text-xl text-accent max-w-3xl mx-auto mb-12 dark:text-white/60">
             Software at Meta for Summer 2025. Mechatronics at UWaterloo until April 2026.
             </p>
-            <a
-              href="#/work"
+            <button
+              onClick={() => scrollToSection(workRef)}
               className="inline-flex items-center bg-[#0071e3] text-white px-6 py-3 rounded-full hover:bg-[#0077ED] transition-colors"
             >
               View my work
-            </a>
+            </button>
           </motion.div>
         </div>
       </section>
 
-      <section id="/about" className="py-32 relative bg-gradient-to-b from-white via-primary-light to-primary-light dark:from-black dark:via-primary-dark dark:to-primary-dark">
+      <section ref={aboutRef} className="py-32 relative bg-gradient-to-b from-white via-primary-light to-primary-light dark:from-black dark:via-primary-dark dark:to-primary-dark">
         <div className="container mx-auto px-6 max-w-5xl">
           <div className="reveal">
             <div className="max-w-4xl mx-auto text-center">
@@ -135,7 +152,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="/work" className="py-32 bg-primary-light dark:bg-primary-dark">
+      <section ref={workRef} className="py-32 bg-primary-light dark:bg-primary-dark">
         <div className="container mx-auto px-6">
           <div className="reveal">
             <h2 className="text-4xl font-bold mb-16 text-center dark:text-white">Experience</h2>
@@ -165,7 +182,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="/contact" className="py-32 bg-[#1D1D1F] text-white">
+      <section ref={contactRef} className="py-32 bg-[#1D1D1F] text-white">
         <div className="container mx-auto px-6">
           <div className="reveal">
             <div className="max-w-3xl mx-auto text-center">
