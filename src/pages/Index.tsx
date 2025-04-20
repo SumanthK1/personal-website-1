@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { motion } from "framer-motion";
+import { getAssetPath } from "@/lib/utils";
 
 const Index = () => {
   const [scrolled, setScrolled] = useState(false);
@@ -32,12 +33,12 @@ const Index = () => {
   }, [isDark]);
 
   const projectImages = [
-    "/images/meta.png",
-    "/images/node.png",
-    "/images/thescore.jpg",
-    "/images/healthcaresystemsra.png",
-    "/images/spotwork.png",
-    "/images/stride.png"
+    getAssetPath("images/meta.png"),
+    getAssetPath("images/node.png"),
+    getAssetPath("images/thescore.jpg"),
+    getAssetPath("images/healthcaresystemsra.png"),
+    getAssetPath("images/spotwork.png"),
+    getAssetPath("images/stride.png")
   ];
 
   const projectDetails = [
@@ -100,7 +101,7 @@ const Index = () => {
             <h1 
               className="text-6xl md:text-7xl font-bold mb-8 leading-tight bg-gradient-to-r from-[#0EA5E9] via-[#33C3F0] to-[#4ADE80] bg-clip-text text-transparent dark:text-white dark:heading-glow dark:bg-none"
             >
-             Hello, I’m Sumanth. Solving problems, one line at a time.
+             Hello, I'm Sumanth. Solving problems, one line at a time.
             </h1>
             <p className="text-xl text-accent max-w-3xl mx-auto mb-12 dark:text-white/60">
             Software at Meta for Summer 2025. Mechatronics at UWaterloo until April 2026.
