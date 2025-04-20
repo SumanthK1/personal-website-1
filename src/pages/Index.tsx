@@ -78,7 +78,7 @@ const Index = () => {
               {["About", "Work", "Contact"].map((item) => (
                 <a
                   key={item}
-                  href={`#${item.toLowerCase()}`}
+                  href={`#/${item.toLowerCase()}`}
                   className="text-xs md:text-sm hover:text-accent transition-colors dark:text-white/80 dark:hover:text-white"
                 >
                   {item}
@@ -107,7 +107,7 @@ const Index = () => {
             Software at Meta for Summer 2025. Mechatronics at UWaterloo until April 2026.
             </p>
             <a
-              href="#work"
+              href="#/work"
               className="inline-flex items-center bg-[#0071e3] text-white px-6 py-3 rounded-full hover:bg-[#0077ED] transition-colors"
             >
               View my work
@@ -116,7 +116,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="about" className="py-32 relative bg-gradient-to-b from-white via-primary-light to-primary-light dark:from-black dark:via-primary-dark dark:to-primary-dark">
+      <section id="/about" className="py-32 relative bg-gradient-to-b from-white via-primary-light to-primary-light dark:from-black dark:via-primary-dark dark:to-primary-dark">
         <div className="container mx-auto px-6 max-w-5xl">
           <div className="reveal">
             <div className="max-w-4xl mx-auto text-center">
@@ -135,7 +135,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="work" className="py-32 bg-primary-light dark:bg-primary-dark">
+      <section id="/work" className="py-32 bg-primary-light dark:bg-primary-dark">
         <div className="container mx-auto px-6">
           <div className="reveal">
             <h2 className="text-4xl font-bold mb-16 text-center dark:text-white">Experience</h2>
@@ -165,7 +165,7 @@ const Index = () => {
         </div>
       </section>
 
-      <section id="contact" className="py-32 bg-[#1D1D1F] text-white">
+      <section id="/contact" className="py-32 bg-[#1D1D1F] text-white">
         <div className="container mx-auto px-6">
           <div className="reveal">
             <div className="max-w-3xl mx-auto text-center">
